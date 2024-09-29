@@ -1,5 +1,5 @@
 # 项目简介
-项目为个人平时测试研究用途，主要是用.NET8 JIT的虚拟机加密，源代码完全开放。    
+项目测试研究用途，主要是用.NET8 JIT的虚拟机加密，源代码完全开放。    
 加密软件项目Encryption SoftWare文件下面，它是用.NET4.8.1写的Winform窗体应用程序。  
 C_DLL项目是C++ 虚拟机加密托管DLL运行时的项目，也就是JIT加密的关键部分。  
 C#_DLL是一个C#示例，被Encryption SoftWare加密测试之用，版本.NET8.0.4。  

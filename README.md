@@ -7,7 +7,13 @@ C_DLL项目是C++ 虚拟机加密托管DLL运行时的项目，也就是JIT加�
 由于测试用例，代码命名等并不太规范。  
 测试用例，对托管Main函数进行了动态拦截(虚拟机加密),改变其函数调用。  
 
-## 有问题可以关注公众号:jianghupt了解最新动向。  
+## 有问题可以关注公众号:jianghupt了解最新动向。    
+
+## 虚拟机加密原理
+通过hook jit的编译函数compileMethod，对其参数的ILCode进行动态更改。比如当CLR运行调用JIT的时候，判断当前JIT编译的函数是否是托管Main  
+如果是则把托管Main的ILCode更改为需要hook地方。  
+关于JIT加密参考：
+[.Net虚拟机(CLR/JIT)加密原理(版权保护)](https://mp.weixin.qq.com/s?__biz=Mzg5NDYwNjU4MA==&mid=2247485395&idx=1&sn=b640a5e447083dc7312effe3dc28dfe9&chksm=c01c4a48f76bc35ecec1f6aa4559d8fcf8686cec2e4d489afe35f1f021cd9a8c8e436fcd5afa&token=1456248676&lang=zh_CN#rd)
 
 ## .注意事项
 注意事项写在前面，

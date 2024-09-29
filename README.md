@@ -28,7 +28,7 @@ BYTE MainCode[13] =
  ```
 把里面的十六进制更改成C#_DLL生成的托管DLL的DEF函数的十六进制函数体。  
 
-
+## 介绍
 ### 1.C#_DLL
 这个文件夹里面包含了需要被加密的.NET 托管DLL的例子，托管DLL名：ABC.dll
 

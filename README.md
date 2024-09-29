@@ -104,7 +104,7 @@ Jianghupt.runtimeconfig.json，也放到/Proteced/Proteced文件夹里面。加�
     }  
 ```
 
-如果到这一步成功了，最终可以看到打印出【Call DEF】。
+被加密后的Jianghupt.dll和未被加密的ABC.dll区别就在这。如果到这一步成功了，最终可以看到打印出【Call DEF】。
 
 
 

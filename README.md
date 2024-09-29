@@ -42,15 +42,15 @@ BYTE MainCode[13] =
 打开Demo文件夹  
 1.双击加密软件.exe  
 
-2.选择当前目录下的ABC.dll，这个dll是上面介绍的C#_DLL项目里面生成的。
+2.路径选择当前目录下(Demo文件夹目录下)的ABC.dll，这个dll是上面介绍的C#_DLL项目里面生成的。
 
 3.点击加密  
 
 4.在当前目录(Demo文件夹下)的/Proteced/Proteced里面生成了一个托管Jianghupt.dll， 
-把ABC.runtimeconfig.json放到/Proteced/Proteced目录改名为：Jianghupt.runtimeconfig.json    
+把Demo文件夹下的ABC.runtimeconfig.json放到/Proteced/Proteced目录改名为：Jianghupt.runtimeconfig.json    
 把JIT_VM.dll(它是支撑JIT加密的C++ DLL，也即是上面介绍的C_DLL项目)也放入到/Proteced/Proteced文件夹。  
 
-5.命令：dotnet Jianghupt.dll 即可运行看到效果。本来调用的ABC()函数被JIT动态Hook成了DEF()函数。
+5.到此时，如果一切没有出错。命令：dotnet Jianghupt.dll 即可运行看到效果。本来调用的ABC()函数被JIT动态Hook成了DEF()函数。
 
 ### 5.实际效果
 上面第4步实例演示的C#_DLL项目里的C#代码如下：

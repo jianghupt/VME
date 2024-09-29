@@ -60,6 +60,8 @@ BYTE MainCode[13] =
 把Demo文件夹下的ABC.runtimeconfig.json放到/Proteced/Proteced目录改名为：Jianghupt.runtimeconfig.json    
 把JIT_VM.dll(它是支撑JIT加密的C++ DLL，也即是上面介绍的C_DLL项目)也放入到/Proteced/Proteced文件夹。  
 
-5.到此时，如果一切没有出错。命令：dotnet Jianghupt.dll 即可运行看到效果。本来调用的ABC()函数被JIT动态Hook成了DEF()函数。
+5.到此时，如果一切没有出错。命令：dotnet Jianghupt.dll 即可运行看到效果。本来调用的ABC()函数被JIT动态Hook成了DEF()函数。  
+
+6.在Jianghupt.dll被CLR加载调用JIT的时候，关联了JIT_VM.dll，会被其hook更改了托管Main函数里面的IL代码。以此运行真正的代码。  
 
 

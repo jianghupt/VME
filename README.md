@@ -16,12 +16,14 @@ C_DLL项目是C++ 虚拟机加密托管DLL运行时的项目，也就是JIT加�
 [.Net虚拟机(CLR/JIT)加密原理(版权保护)](https://mp.weixin.qq.com/s?__biz=Mzg5NDYwNjU4MA==&mid=2247485395&idx=1&sn=b640a5e447083dc7312effe3dc28dfe9&chksm=c01c4a48f76bc35ecec1f6aa4559d8fcf8686cec2e4d489afe35f1f021cd9a8c8e436fcd5afa&token=1456248676&lang=zh_CN#rd)
 
 ## .注意事项
-注意事项写在前面，
+注意事项写在前面  
+
 1.目前加密测试用例是控制台.NET8.0.4版本，其它版本没有测试，所以以下测试建议在.NET8.0.4版本上运行。否则会出错。  
 也就是你必须具有以下目录的.NET控制台版本：  
 ```
 C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.4
 ```
+
 2.如果出错，查看下C_DLL项目的C++代码JIT_VM.cpp里面的MainCode变量：
  ```
 BYTE MainCode[13] =
@@ -35,7 +37,8 @@ BYTE MainCode[13] =
 };
  ```
 把里面的十六进制更改成C#_DLL生成的托管DLL的DEF函数的十六进制函数体。  
-3.当前示例，匹配当前项目，专测试之用。如果要加密其它托管DLL，可以自行扩展。
+
+3.当前示例，匹配当前项目，专测试之用。如果要加密其它托管DLL，需要自行扩展。当前只能加密C#_DLL项目的ABC.DLL，其它出错
 
 ## 介绍
 ### 1.C#_DLL

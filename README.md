@@ -24,7 +24,7 @@ C_DLL项目是C++ 虚拟机加密托管DLL运行时的项目，也就是JIT加�
 C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.4
 ```
 
-2.如果出错，查看下C_DLL项目的C++代码JIT_VM.cpp里面的MainCode变量：
+2.如果还是出错，查看下C_DLL项目的C++代码JIT_VM.cpp里面的MainCode变量：
  ```
 BYTE MainCode[13] =
 {
@@ -40,6 +40,8 @@ BYTE MainCode[13] =
 
 3.当前示例，匹配当前项目，专测试之用。如果要加密其它托管DLL，需要自行扩展。当前只能加密C#_DLL项目的ABC.DLL，其它出错
 
+4.因为代码涉及到通过mono.cecil注入，hook JIT等操作。一些低级杀毒软件报毒，在所难免。  
+
 ## 介绍
 ### 1.C#_DLL
 这个文件夹里面包含了需要被加密的.NET 托管DLL的例子，托管DLL名：ABC.dll
@@ -48,7 +50,7 @@ BYTE MainCode[13] =
 这里面包含了通过C++操控JIT对ILCode进行运行时的更改，以便动态的利用虚拟机加密托管DLL。C++ dll：JIT_VM.dll
 
 ### 3.Encryption SoftWare
-加密软件，通过选择托管的DLL，然后用这个软件进行加密。加密之后的托管DLL，存放路径在托管DLL当前目录的/Proteced/Proteced里面
+加密软件，通过选择示例托管的DLL，用这个软件进行加密。加密之后的托管DLL，存放路径在托管DLL当前目录的/Proteced/Proteced里面
 
 ### 4.Demo
 演示的例子，演示步骤如下：

@@ -10,7 +10,7 @@ C_DLL项目是C++ 虚拟机加密托管DLL运行时的项目，也就是JIT加�
 ##### 有问题可以关注公众号:jianghupt了解最新动向。    
 
 ## 虚拟机加密原理
-原理其实很简单，一句话的事情。通过hook jit的编译函数compileMethod，对其参数的ILCode进行动态更改。比如当CLR运行调用JIT的时候，判断当前JIT编译的函数是否是托管Main  
+原理：通过hook jit的编译函数compileMethod，对其参数的ILCode进行动态更改。比如当CLR运行调用JIT的时候，判断当前JIT编译的函数是否是托管Main  
 如果是则把托管Main的ILCode更改为需要的ILcode，也即是十六进制更改。  
 关于JIT加密参考：
 [.Net虚拟机(CLR/JIT)加密原理(版权保护)](https://mp.weixin.qq.com/s?__biz=Mzg5NDYwNjU4MA==&mid=2247485395&idx=1&sn=b640a5e447083dc7312effe3dc28dfe9&chksm=c01c4a48f76bc35ecec1f6aa4559d8fcf8686cec2e4d489afe35f1f021cd9a8c8e436fcd5afa&token=1456248676&lang=zh_CN#rd)
@@ -38,9 +38,9 @@ BYTE MainCode[13] =
  ```
 把里面的十六进制更改成C#_DLL生成的托管DLL的DEF函数的十六进制函数体。  
 
-3.当前示例，匹配当前项目，专测试之用。如果要加密其它托管DLL，需要自行扩展。当前只能加密C#_DLL项目的ABC.DLL，其它出错
+3.当前示例，匹配当前项目，专测试之用。如果要加密其它托管DLL，需要自行扩展。也就是说当前只能加密C#_DLL项目的ABC.DLL，其它出错
 
-4.因为代码涉及到通过mono.cecil注入，hook JIT等操作。一些低级杀毒软件报毒，在所难免。  
+4.因为代码涉及到通过mono.cecil注入，hook JIT等操作。一些低级杀毒软件可能报毒，这点需注意。  
 
 ## 介绍
 ### 1.C#_DLL

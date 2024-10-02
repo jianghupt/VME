@@ -10,7 +10,7 @@ C_DLL项目是C++ 虚拟机加密托管DLL运行时的项目，也就是JIT加�
 ##### 有问题可以关注公众号:jianghupt了解最新动向。    
 
 ## 虚拟机加密原理
-原理：通过hook jit的编译函数compileMethod，对其参数的ILCode进行动态更改。比如当CLR运行调用JIT的时候，判断当前JIT编译的函数是否是托管Main  
+原理：通过hook jit的编译函数，对其参数的ILCode进行动态更改。比如当CLR运行调用JIT的时候，判断当前JIT编译的函数是否是托管Main  
 如果是则把托管Main的ILCode更改为需要的ILcode，也即是十六进制更改。  
 关于JIT加密参考下图：
 ![image](https://github.com/user-attachments/assets/631cd060-7070-44e7-99a8-adbcc4692100)

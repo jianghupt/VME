@@ -1,3 +1,10 @@
+## Language
+
+- [English](https://github.com/jianghupt/VME/blob/main/README_English.md)
+- [中文](https://github.com/jianghupt/VME/edit/main/README.md)
+
+
+
 # 项目简介
 项目测试研究用途，主要是用.NET8 JIT的虚拟机加密，源代码完全开放。    
 C#_DLL是一个C#示例，被Encryption SoftWare加密测试之用，版本.NET8.0.4。    

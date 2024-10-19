@@ -1,3 +1,10 @@
+## Language
+
+- [English](https://github.com/jianghupt/VME/blob/main/README_English.md)
+- [中文](https://github.com/jianghupt/VME/edit/main/README.md)
+
+
+
 # Project Introduction
 The purpose of the project test research is mainly to use .NET8 JIT virtual machine encryption, and the source code is completely open.
 C#_DLL is a C# example used for encryption testing by Encryption SoftWare, version .NET8.0.4.

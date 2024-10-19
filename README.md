@@ -1,7 +1,7 @@
 ## Language
 
 - [English](https://github.com/jianghupt/VME/blob/main/README.md)
-- [中文](https://github.com/jianghupt/VME/edit/main/README_zh.md)
+- [中文](https://github.com/jianghupt/VME/blob/main/README_zh.md)
 
 
 
